@@ -13,15 +13,23 @@ void init(){
     }
 }
 
-int A,B,M;
+unsigned int A,B,M;
+
+int dequy(unsigned int a,unsigned int b,unsigned int m){
+    if(b==1)return a%m;
+    unsigned int x=dequy(a,b/2,m);
+    unsigned int result=(x*x)%m;
+    if(b%2==1)result=(result*a)%m;
+    return result;
+}
 
 int main(){
     init();
     cin>>A>>B>>M;
-    int result=1;
-    A%=M;
-    for(int i=1;i<=B;i++){
-        result=(result*A)%M;
-    }
-    cout<<result;
+    // int result=1;
+    // A%=M;
+    // for(int i=1;i<=B;i++){
+    //     result=(result*A)%M;
+    // }
+    cout<<dequy(A,B,M);
 }
