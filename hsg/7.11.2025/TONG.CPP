@@ -25,7 +25,15 @@ int main(){
     init();
     cin>>n;
     a.resize(n);
+    int sum=0;
+    int res=0;
+    map<int,int> sl;
+    sl[0]=1;
     for(int&x:a){
         cin>>x;
+        sum+=x;
+        res+=sl[sum];
+        sl[sum]++;
     }
+    cout<<res;
 }
