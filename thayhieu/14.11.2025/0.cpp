@@ -19,21 +19,18 @@ void init(){
     freopen(TASK".INP","r",stdin);
     freopen(TASK".OUT","w",stdout);
 }
-vector<int>a;
+int a;
 int n,d;
 long long res=0;
-unordered_map<int,int> qt;//qt[i] là số lương i đã xuất hiện từ a_0 đến j-d
+vector<int> qt(1000001,0);//qt[i] là số lương i đã xuất hiện từ a_0 đến j-d
 int main(){
     init();
-    cin>>n>>d;
-    a.resize(n);
-    for(int i=0;i<d;i++){
-        cin>>a[i];
-    }
-    for(int j=d;j<n;j++){
-        cin>>a[j];
-        qt[a[j-d]]++;
-        res+=qt[a[j]];
+    cin>>n;
+    // int*it;
+    for(int j=0;j<n;j++){
+        cin>>a;
+        res+=qt[a]++;
+        // qt[a]++;
     }
     cout<<res;
 }

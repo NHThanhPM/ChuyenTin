@@ -11,30 +11,33 @@ __________ __      __      __      ___     __ __      __
 using namespace std;
 void init(){
     #define TASK "CHIAK"
+    std::ios_base::sync_with_stdio(0);
+    cin.tie(0);cout.tie(0);
     if(!fopen(TASK".INP","r")){
         return;
     }
-    std::ios_base::sync_with_stdio(0);
-    cin.tie(0);cout.tie(0);
     freopen(TASK".INP","r",stdin);
     freopen(TASK".OUT","w",stdout);
 }
-#define ULL long long
+#define ULL int
 ULL n,k,sum=0,res=0;;
-vector<ULL> SoDu;
+map<ULL,ULL> SoDu;
 // map<ULL,ULL> sum;
 int main(){
     init();
     cin>>n>>k;
-    SoDu.resize(k,0);
+    // SoDu.resize(k,0);
     SoDu[0]=1;
     ULL tmp;
+    int*it;
     for(ULL i=0;i<n;i++){
         cin>>tmp;
-        sum=(sum+tmp)%k;
+        sum+=tmp;
+        sum%=k;
         if(sum<0)sum+=k;
-        res+=SoDu[sum];
-        SoDu[sum]++;
+        it=&SoDu[sum];
+        res+=*it;
+        (*it)++;
     }
     cout<<res;
 }
