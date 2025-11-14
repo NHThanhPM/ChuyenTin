@@ -21,12 +21,12 @@ void init(){
 }
 #define ULL int
 ULL n,k,sum=0,res=0;;
-map<ULL,ULL> SoDu;
+vector<ULL> SoDu;
 // map<ULL,ULL> sum;
 int main(){
     init();
     cin>>n>>k;
-    // SoDu.resize(k,0);
+    SoDu.resize(k,0);
     SoDu[0]=1;
     ULL tmp;
     int*it;
