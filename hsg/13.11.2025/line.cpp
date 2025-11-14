@@ -11,11 +11,11 @@ __________ __      __      __      ___     __ __      __
 using namespace std;
 void init(){
     #define TASK "line"
+    std::ios_base::sync_with_stdio(0);
+    cin.tie(0);cout.tie(0);
     if(!fopen(TASK".inp","r")){
         return;
     }
-    std::ios_base::sync_with_stdio(0);
-    cin.tie(0);cout.tie(0);
     freopen(TASK".inp","r",stdin);
     freopen(TASK".out","w",stdout);
 }
