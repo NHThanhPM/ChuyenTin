@@ -1,0 +1,8 @@
+Benchmark 1: ./line
+  Time (mean ± σ):      68.4 ms ±   6.8 ms    [User: 66.6 ms, System: 1.2 ms]
+  Range (min … max):    64.0 ms …  88.6 ms    32 runs
+
+Benchmark 1: ./Chiahetk
+  Time (mean ± σ):      1.459 s ±  0.095 s    [User: 1.419 s, System: 0.021 s]
+  Range (min … max):    1.365 s …  1.636 s    10 runs
+ 
