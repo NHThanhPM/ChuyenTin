@@ -1,0 +1,4 @@
+Benchmark 1: ./WATER
+  Time (mean ± σ):      23.2 ms ±   3.0 ms    [User: 20.5 ms, System: 2.0 ms]
+  Range (min … max):    17.4 ms …  29.2 ms    104 runs
+ 
