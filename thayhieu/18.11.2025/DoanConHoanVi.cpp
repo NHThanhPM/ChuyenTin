@@ -39,7 +39,7 @@ private:
         while(i<index && i<n){
             if(a[i]>m){
                 i++;
-                index=i+m-1;
+                index++;
                 appear.resize(m+1,0);
                 unique=0;
                 continue;
