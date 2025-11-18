@@ -34,6 +34,7 @@ private:
         if(!appear[item])unique--;
     }
     inline int AddMItem(int index){
+        unique=0;
         int i=index;
         index+=m-1;
         while(i<index && i<n){
