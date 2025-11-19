@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "formulahendry.code-runner",
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+    ]
+}
