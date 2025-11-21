@@ -4,4 +4,6 @@
 !*.cpp
 !*.CPP
 !*.py
+!*.pdf
 !.gitignore
+!.gitattributes
