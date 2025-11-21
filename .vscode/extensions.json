@@ -4,6 +4,7 @@
         "ms-vscode.cpptools",
         "ms-vscode.cpptools-extension-pack",
         "ms-python.python",
-        "ms-python.vscode-pylance"
+        "ms-python.vscode-pylance",
+        "divyanshuagrawal.competitive-programming-helper"
     ]
 }
