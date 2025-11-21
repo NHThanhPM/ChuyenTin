@@ -10,7 +10,7 @@ __________ __      __      __      ___     __ __      __
 #include <bits/stdc++.h>
 using namespace std;
 void init(){
-    #define TASK "Bai1"
+    #define TASK "Bai2"
     std::ios_base::sync_with_stdio(0);
     cin.tie(0);cout.tie(0);
     if(!fopen(TASK".INP","r")){
@@ -23,14 +23,15 @@ void init(){
 class solution{
 private:
     int n,m,unique/*số lượng số khác nhau*/;
-    vector<int>a;
+    vector<int>a;//list input
     vector<ULL> appear;//số lần xuất hiện
     inline void add(int item){
+        if(item<=m)
         if(!appear[item])unique++;
         appear[item]++;
     }
     inline bool erase(int item){
-        return a[item]>1;
+        return appear[item]>1;
     }
 public:
     friend istream& operator>>(istream&in,solution&input)
@@ -40,16 +41,31 @@ public:
         for(int i=0;i<input.n;i++){
             cin>>input.a[i];
         }
-        input.appear.resize(input.m+1);
+        input.appear.resize(input.m+1,0);
         return in;
     }
     unsigned long long answer(){
         unsigned long long res=0;
         unique=0;
+        int pre_i=-1;
         int i=0;
-        int j=0;
+        int j=-1;
         while(j<n){
-            
+            while(unique<m){
+                if(j==n-1)break;
+                j++;
+                add(a[j]);
+            }
+            if(unique<m)return res;
+            // j--;
+            while(erase(a[i])){
+                appear[a[i]]--;
+                i++;
+            }
+            res+=(i-pre_i)*(n-j);
+            pre_i=i;
+            appear[a[i++]]--;
+            unique--;
         }
         return res;
     }
