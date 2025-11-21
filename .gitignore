@@ -1,9 +1,17 @@
 #ignore all files
 *
+#not ignore subfolders
+!*/
+
+#not ignore configuration files
 !.vscode/
+!.gitignore
+!.gitattributes
+
+#not ignore source files
 !*.cpp
 !*.CPP
 !*.py
+
+#not ignore pdf files
 !*.pdf
-!.gitignore
-!.gitattributes
